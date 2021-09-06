@@ -19,6 +19,10 @@ public class Carro {
     String cor;
     boolean conversivel;
 
+    // Identificação
+    String chassi;
+    int anoFabricacao;
+
     // Direção
     String cambio;
     String direcao;
@@ -171,8 +175,10 @@ public class Carro {
         this.kitMultimidia = kitMultimidia;
     }
 
-    public Carro(String nome, String motor) {
+    public Carro(String nome, String motor, String chassi, int anoFabricacao) {
         this.nome = nome;
+        this.chassi = chassi;
+        this.anoFabricacao = anoFabricacao;
         this.portas = 4;
         this.cor = COR_BRANCA;
         this.conversivel = false;
@@ -189,6 +195,8 @@ public class Carro {
     public void imprimeValores() {
         System.out.println("\n## Dados gerais ###########################");
         System.out.println("Nome: " + nome);
+        System.out.println("Ano de fabricação: " + anoFabricacao);
+        System.out.println("Chassi: " + chassi);
         System.out.println("Portas: " + portas);
         System.out.println("Cor: " + cor);
         System.out.println("Conversível: " + getConversivel());
